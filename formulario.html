@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Date - Formulario</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Check Date" class="logo">
+            <h1>Check Date</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="grupos.html">Grupos</a></li>
+                <li><a href="detalle.html">Detalle</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <section>
+            <h2>Formulario</h2>
+            <p>Completa los campos para <strong>crear un nuevo grupo</strong> o para <strong>añadir tu disponibilidad</strong> en un grupo ya existente.</p>
+        </section>
+
+        <!-- Formulario. Action = donde se envia. Method=como se envia -->
+        <form action="#" method="post"> 
+            <!-- Datos del usuario -->
+            <fieldset>
+                <legend>Datos del usuario</legend>
+
+                <!--Con label asocio el texto al input-->
+                <label for="nombre">Usuario:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </fieldset>
+
+            <br>
+            
+            <!-- Opción: Añadir disponibilidad -->
+            <fieldset>
+                <legend>Añadir disponibilidad a un grupo</legend>
+
+                <label for="codigoGrupo">Código del grupo:</label>
+                <input type="text" id="codigoGrupo" name="codigoGrupo">
+                <br><br>
+
+                <p>Selecciona tus fechas disponibles:</p>
+                <input type="checkbox" id="f1" name="fechas" value="12Julio">
+                <label for="f1">12 Julio</label><br>
+
+                <input type="checkbox" id="f2" name="fechas" value="19Julio">
+                <label for="f2">13 Julio</label><br>
+
+                <input type="checkbox" id="f3" name="fechas" value="26Julio">
+                <label for="f3">14 Julio</label><br>
+            </fieldset>
+
+            <br>
+
+            <!-- Opción: Crear un grupo nuevo -->
+            <fieldset>
+                <legend>Crear un grupo nuevo</legend>
+
+                <label for="nombreGrupo">Nombre del grupo:</label>
+                <input type="text" id="nombreGrupo" name="nombreGrupo">
+                <br><br>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="3" cols="30" maxlength="100"></textarea>
+            </fieldset>
+
+            <br>
+
+            <!-- Botones -->
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Check Date - Proyecto IW</p>
+    </footer>
+</body>
+</html>
