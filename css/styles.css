@@ -212,3 +212,69 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* ====== Mobile Responsive ====== */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;  /* apila el texto y la imagen */
+        gap: 20px;
+        align-items: center;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .image-content img {
+        max-width: 90%;   /* ocupa casi todo el ancho */
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* ====== Tablas responsive ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Contenedor scroll */
+table-wrapper {
+    overflow-x: auto;
+}
+
+/* Celdas */
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* evita que el texto se rompa */
+}
+
+th {
+    background-color: #00A896;
+    color: white;
+}
+
+/* Media query para móviles */
+@media screen and (max-width: 768px) {
+    .table-wrapper {
+        overflow-x: auto;       /* scroll horizontal */
+    }
+
+    table {
+        min-width: 600px;       /* asegura que no se comprima demasiado */
+    }
+}
+
+}
