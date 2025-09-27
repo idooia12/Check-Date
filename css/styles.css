@@ -160,12 +160,27 @@ label {
 }
 
 input{
-    width: auto;   /* que no se estiren */
-    margin-right: 6px; /* espacio entre la casilla y el texto */
+    width: auto;   /* no se estiran */
+    margin-right: 6px; /* espacio casilla-texto */
+}
+
+/* Solo texto que sigue al radio */
+input[type="radio"] + label {
+    font-weight: normal;      
+}
+
+/* Selector de color */
+input[type="color"] {
+    width: 30px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 6px;
+    background: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
  
-
-/* TODO */
 .checkbox{
     display: flex;
     align-items: center;

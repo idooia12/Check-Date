@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Date - Formulario</title>
     <link rel="stylesheet" href="css/styles.css">
-    
-
 </head>
 <body>
     <!-- Cabecera -->
@@ -30,16 +28,15 @@
     <main>
         <section>
             <h2>Formulario</h2>
-            <p>Completa los campos para <strong>crear un nuevo grupo</strong> o para <strong>añadir tu disponibilidad</strong> en un grupo ya existente.</p>
+            <p>Completa los campos para <strong>unirte a un grupo existente</strong> o para <strong>crear un nuevo grupo</strong>.</p>
         </section>
 
-        <!-- Formulario. Action = donde se envia. Method=como se envia -->
+        <!-- Formulario -->
         <form action="#" method="post"> 
             <!-- Datos del usuario -->
             <fieldset>
                 <legend>Datos del usuario</legend>
 
-                <!--Con label asocio el texto al input-->
                 <label for="nombre">Usuario:</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <br><br>
@@ -50,23 +47,12 @@
 
             <br>
             
-            <!-- Opción: Añadir disponibilidad -->
+            <!-- Opción: Unirse a un grupo -->
             <fieldset>
-                <legend>Añadir disponibilidad a un grupo</legend>
+                <legend>Unirse a un grupo</legend>
 
                 <label for="codigoGrupo">Código del grupo:</label>
-                <input type="text" id="codigoGrupo" name="codigoGrupo">
-                <br><br>
-
-                <p>Selecciona tus fechas disponibles:</p>
-                <input type="checkbox" id="f1" name="fechas" value="12Julio">
-                <label for="f1">12 Julio</label><br>
-
-                <input type="checkbox" id="f2" name="fechas" value="19Julio">
-                <label for="f2">13 Julio</label><br>
-
-                <input type="checkbox" id="f3" name="fechas" value="26Julio">
-                <label for="f3">14 Julio</label><br>
+                <input type="text" id="codigoGrupo" name="codigoGrupo" placeholder="Ej: ABC123">
             </fieldset>
 
             <br>
@@ -81,6 +67,51 @@
 
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" rows="3" cols="30" maxlength="100"></textarea>
+                <br><br>
+
+                <!-- Fechas de inicio y fin -->
+                <p><strong>Límites de fechas:</strong></p>
+                <p>Indica el rango de fechas dentro del cual se organizará el plan. </p>  
+                <p>Después, dentro de ese rango, cada participante marcará su disponibilidad y se elegirá la fecha final.</p>
+                
+                <label for="fechaInicio">Fecha límite de inicio:</label>
+                <input type="date" id="fechaInicio" name="fechaInicio">
+                <br>
+
+                <label for="fechaFin">Fecha límite de fin:</label>
+                <input type="date" id="fechaFin" name="fechaFin">
+                <br><br>
+
+                <!-- Tipo de plan (radio) -->
+                <p><strong>Tipo de plan:</strong></p>
+                <input type="radio" id="viaje" name="tipoPlan" value="viaje">
+                <label for="viaje">Viaje</label><br>
+
+                <input type="radio" id="evento" name="tipoPlan" value="evento">
+                <label for="evento">Evento</label><br>
+
+                <input type="radio" id="reunion" name="tipoPlan" value="reunion">
+                <label for="reunion">Reunión</label><br>
+
+                <input type="radio" id="otro" name="tipoPlan" value="otro">
+                <label for="otro">Otro</label>
+                <br><br>
+
+                <!-- Categoría del plan (select) -->
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="ocio">Ocio</option>
+                    <option value="deporte">Deporte</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <br>
+                
+                <!-- Color del grupo -->
+                <label for="colorGrupo">Color del grupo:</label>
+                <input type="color" id="colorGrupo" name="colorGrupo" value="#00A896">
+                <br><br>
+
             </fieldset>
 
             <br>
